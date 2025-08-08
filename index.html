@@ -1,184 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FiveWell - Movie Streaming</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <!-- Logo dan teks "FiveWell" di kiri -->
-    <div class="logo">
-      <img src="five-well-logo.png" alt="FiveWell Logo">
-      <span>FiveWell</span>
-    </div>
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>FiveWell - Movie Streaming</title>
+          <link rel="stylesheet" href="styles.css" />
+          <link
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+               rel="stylesheet"
+          />
+     </head>
+     <body>
+          <!-- Header -->
+          <header>
+               <!-- Logo dan teks "FiveWell" di kiri -->
+               <div class="logo">
+                    <img src="five-well-logo.png" alt="FiveWell Logo" />
+                    <span>FiveWell</span>
+               </div>
 
-    <!-- Navigasi di tengah -->
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Movies</a></li>
-        <li><a href="#">New Releases</a></li>
-        <li><a href="#">Popular</a></li>
-        <li><a href="#">Trends</a></li>
-        <li><a href="#">Ticket Movies</a></li>
-      </ul>
-    </nav>
+               <!-- Navigasi di tengah -->
+               <nav>
+                    <ul>
+                         <li><a href="#">Home</a></li>
+                         <li><a href="#">Movies</a></li>
+                         <li><a href="#">New Releases</a></li>
+                         <li><a href="#">Popular</a></li>
+                         <li><a href="#">Trends</a></li>
+                         <li><a href="#">Ticket Movies</a></li>
+                         <li><a href="#">Ticket Movies2</a></li>
+                    </ul>
+               </nav>
 
-    <!-- User Icons di kanan -->
-    <div class="user-actions">
-      <label class="dark-mode-toggle">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </header>
+               <!-- User Icons di kanan -->
+               <div class="user-actions">
+                    <label class="dark-mode-toggle">
+                         <input type="checkbox" />
+                         <span class="slider round"></span>
+                    </label>
+               </div>
+          </header>
 
-  <!-- Sidebar -->
-  <aside>
-    <ul>
-      <li>
-        <img src="search-icon.png" alt="Search">
-        <span>Search</span>
-      </li>
-      <li>
-        <img src="home-icon.png" alt="Home">
-        <span>Home</span>
-      </li>
-      <li>
-        <img src="profile-icon.png" alt="Profile">
-        <span>Profile</span>
-      </li>
-      <li>
-        <img src="bookmark-icon.png" alt="Bookmark">
-        <span>Bookmark</span>
-      </li>
-      <li>
-        <img src="computer-icon.png" alt="Computer">
-        <span>Computer</span>
-      </li>
-      <li>
-        <img src="sort-icon.png" alt="Sort">
-        <span>Sort</span>
-      </li>
-      <li>
-        <img src="cart-icon.png" alt="Cart">
-        <span>Cart</span>
-      </li>
-    </ul>
-  </aside>
+          <!-- Sidebar -->
+          <aside>
+               <ul>
+                    <li>
+                         <img src="search-icon.png" alt="Search" />
+                         <span>Search</span>
+                    </li>
+                    <li>
+                         <img src="home-icon.png" alt="Home" />
+                         <span>Home</span>
+                    </li>
+                    <li>
+                         <img src="profile-icon.png" alt="Profile" />
+                         <span>Profile</span>
+                    </li>
+                    <li>
+                         <img src="bookmark-icon.png" alt="Bookmark" />
+                         <span>Bookmark</span>
+                    </li>
+                    <li>
+                         <img src="computer-icon.png" alt="Computer" />
+                         <span>Computer</span>
+                    </li>
+                    <li>
+                         <img src="sort-icon.png" alt="Sort" />
+                         <span>Sort</span>
+                    </li>
+                    <li>
+                         <img src="cart-icon.png" alt="Cart" />
+                         <span>Cart</span>
+                    </li>
+               </ul>
+          </aside>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Movie Banner -->
-    <section class="movie-banner">
-      <div class="movie-details">
-        <h1>DJANGO UNCHAINED</h1>
-        <p>
-          Perjalanan seorang budak bernama Django (Jamie Foxx) yang dibebaskan oleh seorang pemburu hadiah asal Jerman, Dr. King Schultz (Christoph Waltz).
-        </p>
-        <button>WATCH</button>
-      </div>
-      <img src="django-banner.jpg" alt="Django Unchained" class="banner-image">
-    </section>
+          <!-- Main Content -->
+          <main>
+               <!-- Movie Banner -->
+               <section class="movie-banner">
+                    <div class="movie-details">
+                         <h1>DJANGO UNCHAINED</h1>
+                         <p>
+                              Perjalanan seorang budak bernama Django (Jamie Foxx) yang dibebaskan
+                              oleh seorang pemburu hadiah asal Jerman, Dr. King Schultz (Christoph
+                              Waltz).
+                         </p>
+                         <button>WATCH</button>
+                    </div>
+                    <img src="django-banner.jpg" alt="Django Unchained" class="banner-image" />
+               </section>
 
-    <!-- Trends Section -->
-    <section class="trends">
-      <h2>TRENDS</h2>
-      <div class="movie-grid">
-        <div class="movie-card">
-          <img src="lego-batman.jpg" alt="Lego Batman">
-        </div>
-        <div class="movie-card">
-          <img src="1920-london.jpg" alt="1920 London">
-        </div>
-        <div class="movie-card">
-          <img src="aquaman.jpg" alt="Aquaman">
-        </div>
-        <div class="movie-card">
-          <img src="13-gold-jakarta.jpg" alt="13 Gold Jakarta">
-        </div>
-      </div>
-    </section>
+               <!-- Trends Section -->
+               <section class="trends">
+                    <h2>TRENDS</h2>
+                    <div class="movie-grid">
+                         <div class="movie-card">
+                              <img src="lego-batman.jpg" alt="Lego Batman" />
+                         </div>
+                         <div class="movie-card">
+                              <img src="1920-london.jpg" alt="1920 London" />
+                         </div>
+                         <div class="movie-card">
+                              <img src="aquaman.jpg" alt="Aquaman" />
+                         </div>
+                         <div class="movie-card">
+                              <img src="13-gold-jakarta.jpg" alt="13 Gold Jakarta" />
+                         </div>
+                    </div>
+               </section>
 
-    <!-- Popular Section -->
-    <section class="popular">
-      <h2>POPULAR</h2>
-      <div class="movie-grid">
-        <div class="movie-card">
-          <img src="avengers.jpg" alt="Avengers">
-        </div>
-        <div class="movie-card">
-          <img src="giant-monster.jpg" alt="Giant Monster">
-        </div>
-        <div class="movie-card">
-          <img src="blade-runner.jpg" alt="Blade Runner">
-        </div>
-        <div class="movie-card">
-          <img src="batman.jpg" alt="Batman">
-        </div>
-      </div>
-    </section>
+               <!-- Popular Section -->
+               <section class="popular">
+                    <h2>POPULAR</h2>
+                    <div class="movie-grid">
+                         <div class="movie-card">
+                              <img src="avengers.jpg" alt="Avengers" />
+                         </div>
+                         <div class="movie-card">
+                              <img src="giant-monster.jpg" alt="Giant Monster" />
+                         </div>
+                         <div class="movie-card">
+                              <img src="blade-runner.jpg" alt="Blade Runner" />
+                         </div>
+                         <div class="movie-card">
+                              <img src="batman.jpg" alt="Batman" />
+                         </div>
+                    </div>
+               </section>
 
-    <!-- Contact Form Section -->
-    <section class="whatsapp-form-section">
-      <div class="form-container">
-        <h2>Hubungi Kami via WhatsApp</h2>
-        <p class="form-subtitle">Punya pertanyaan? Kirim pesan langsung ke tim kami!</p>
+               <!-- Contact Form Section -->
+               <section class="whatsapp-form-section">
+                    <div class="form-container">
+                         <h2>Hubungi Kami via WhatsApp</h2>
+                         <p class="form-subtitle">
+                              Punya pertanyaan? Kirim pesan langsung ke tim kami!
+                         </p>
 
-        <form id="whatsappForm">
-          <div class="form-group">
-            <label for="name">Nama Anda</label>
-            <input type="text" id="name" placeholder="Contoh: Andi Saputra" required />
-          </div>
+                         <form id="whatsappForm">
+                              <div class="form-group">
+                                   <label for="name">Nama Anda</label>
+                                   <input
+                                        type="text"
+                                        id="name"
+                                        placeholder="Contoh: Andi Saputra"
+                                        required
+                                   />
+                              </div>
 
-          <div class="form-group">
-            <label for="message">Pesan Anda</label>
-            <textarea id="message" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
-          </div>
+                              <div class="form-group">
+                                   <label for="message">Pesan Anda</label>
+                                   <textarea
+                                        id="message"
+                                        rows="5"
+                                        placeholder="Tulis pesan Anda..."
+                                        required
+                                   ></textarea>
+                              </div>
 
-          <button type="submit" class="whatsapp-btn">
-            <i class="fab fa-whatsapp"></i> Kirim ke WhatsApp
-          </button>
-        </form>
-      </div>
-    </section>
-  </main>
+                              <button type="submit" class="whatsapp-btn">
+                                   <i class="fab fa-whatsapp"></i> Kirim ke WhatsApp
+                              </button>
+                         </form>
+                    </div>
+               </section>
+          </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="five-well-logo.png" alt="FiveWell Logo">
-        <p>FiveWell - Nonton film tanpa batas, kapan saja, di mana saja.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Movies</a></li>
-          <li><a href="#">Trends</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 FiveWell. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </div>
-  </footer>
+          <!-- FOOTER -->
+          <footer class="site-footer">
+               <div class="footer-content">
+                    <div class="footer-logo">
+                         <img src="five-well-logo.png" alt="FiveWell Logo" />
+                         <p>FiveWell - Nonton film tanpa batas, kapan saja, di mana saja.</p>
+                    </div>
+                    <div class="footer-links">
+                         <h4>Quick Links</h4>
+                         <ul>
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">Movies</a></li>
+                              <li><a href="#">Trends</a></li>
+                              <li><a href="#">Contact Us</a></li>
+                         </ul>
+                    </div>
+                    <div class="footer-social">
+                         <h4>Follow Us</h4>
+                         <div class="social-icons">
+                              <a href="#"><i class="fab fa-facebook"></i></a>
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                              <a href="#"><i class="fab fa-youtube"></i></a>
+                         </div>
+                    </div>
+               </div>
+               <div class="footer-bottom">
+                    <p>
+                         &copy; 2025 FiveWell. All rights reserved. |
+                         <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    </p>
+               </div>
+          </footer>
 
-  <script src="script.js"></script>
-</body>
+          <script src="script.js"></script>
+     </body>
 </html>
