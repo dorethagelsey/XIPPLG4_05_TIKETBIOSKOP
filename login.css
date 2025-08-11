@@ -1,0 +1,297 @@
+/* login.css - Khusus halaman login */
+
+body.login-page {
+    background: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-header {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(to right, #e50914, #b81d24);
+    color: white;
+}
+
+.login-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.login-header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.close-login {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login-form {
+    padding: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #e50914;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: #ddd;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    color: #e50914;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #e50914, #b81d24);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #b81d24, #e50914);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+}
+
+.social-login {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.social-login p {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.social-btn.google {
+    background: #4285F4;
+    color: white;
+    border: none;
+}
+
+.social-btn.facebook {
+    background: #3b5998;
+    color: white;
+    border: none;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.register-link {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Theater curtain effect */
+.curtain-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.curtain-left, .curtain-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    transition: all 1s ease;
+}
+
+.curtain-left {
+    left: 0;
+    border-right: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.curtain-right {
+    right: 0;
+    border-left: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+/* Theater lights */
+.theater-lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: radial-gradient(ellipse at center, rgba(229, 9, 20, 0.4) 0%, transparent 70%);
+    animation: lightPulse 3s infinite alternate;
+}
+
+@keyframes lightPulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+/* Movie clapperboard decoration */
+.clapperboard {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background: #222;
+    transform: rotate(45deg);
+    border: 2px solid #e50914;
+    opacity: 0.3;
+}
+
+.clapperboard::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80%;
+    height: 60%;
+    background: #111;
+    border: 1px solid #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .login-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .login-header h2 {
+        font-size: 24px;
+    }
+    
+    .social-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .social-btn {
+        justify-content: center;
+    }
+}

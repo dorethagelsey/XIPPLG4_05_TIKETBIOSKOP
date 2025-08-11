@@ -113,3 +113,85 @@ document.getElementById("whatsappForm")?.addEventListener("submit", function (e)
 
      window.open(whatsappUrl, "_blank");
 });
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle login button click
+    const loginButton = document.querySelector('.login-button');
+    
+    if (loginButton) {
+        loginButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Check if we're already on the login page
+            if (window.location.pathname.endsWith('login.html')) {
+                // If on login page, show the modal
+                document.getElementById('loginModal').style.display = 'block';
+            } else {
+                // Otherwise, navigate to login page
+                window.location.href = 'login.html';
+            }
+        });
+    }
+    
+    // Code for login.html functionality
+    if (window.location.pathname.endsWith('login.html')) {
+        // Show login modal by default when on login.html
+        document.getElementById('loginModal').style.display = 'block';
+        
+        // Close button functionality
+        const closeButtons = document.querySelectorAll('.close-login');
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.login-modal').style.display = 'none';
+            });
+        });
+        
+        // Toggle between login and register modals
+        const showRegister = document.getElementById('showRegister');
+        const showLogin = document.getElementById('showLogin');
+        
+        if (showRegister) {
+            showRegister.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('loginModal').style.display = 'none';
+                document.getElementById('registerModal').style.display = 'block';
+            });
+        }
+        
+        if (showLogin) {
+            showLogin.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('registerModal').style.display = 'none';
+                document.getElementById('loginModal').style.display = 'block';
+            });
+        }
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('login-modal')) {
+                e.target.style.display = 'none';
+            }
+        });
+    }
+    
+    // Form submission handlers
+    const loginForm = document.querySelector('.login-form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your login logic here
+            alert('Login functionality would be implemented here');
+        });
+    }
+    
+    const registerForm = document.querySelector('#registerModal .login-form');
+    if (registerForm) {
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your registration logic here
+            alert('Registration functionality would be implemented here');
+        });
+    }
+});
