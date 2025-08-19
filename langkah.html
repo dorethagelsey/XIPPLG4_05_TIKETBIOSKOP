@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesan Tiket Bioskop</title>
+
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/34356f90b7.js" crossorigin="anonymous"></script>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="./langkah.css" />
+
+  <!-- Link JS -->
+  <script src="langkah.js" defer></script>
+</head>
+<body>
+
+  <!-- Location & Schedule Section -->
+  <section class="location-schedule-section">
+    <div class="container">
+      <h2>PILIH LOKASI & JADWAL</h2>
+      <p class="section-subtitle">Pilih kota, bioskop, dan waktu tayang untuk film favorit Anda</p>
+
+      <div class="selection-steps">
+        <div class="step active" data-step="1">
+          <span>1</span>
+          <p>Pilih Kota</p>
+        </div>
+        <div class="step" data-step="2">
+          <span>2</span>
+          <p>Pilih Bioskop</p>
+        </div>
+        <div class="step" data-step="3">
+          <span>3</span>
+          <p>Pilih Tanggal & Jam</p>
+        </div>
+      </div>
+
+      <!-- Step 1: City Selection -->
+      <div class="selection-content active" id="step1-content">
+        <div class="city-selection">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Cari kota..." id="citySearch">
+          </div>
+          <div class="city-grid">
+            <div class="city-card" data-city="jakarta">
+              <h3>Jakarta</h3>
+            </div>
+            <div class="city-card" data-city="bandung">
+              <h3>Bandung</h3>
+            </div>
+            <div class="city-card" data-city="surabaya">
+              <h3>Surabaya</h3>
+            </div>
+            <div class="city-card" data-city="yogyakarta">
+              <h3>Yogyakarta</h3>
+            </div>
+            <div class="city-card" data-city="bali">
+              <h3>Bali</h3>
+            </div>
+            <div class="city-card" data-city="medan">
+              <h3>Medan</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Cinema Selection -->
+      <div class="selection-content" id="step2-content">
+        <div class="cinema-selection">
+          <h3>Pilih Bioskop di <span id="selectedCity">Jakarta</span></h3>
+          <div class="cinema-grid">
+            <div class="cinema-card" data-cinema="fivewell-grand-indonesia">
+              <div class="cinema-info">
+                <h4>FiveWell Grand Indonesia</h4>
+                <p>Jl. M.H. Thamrin No.1, Jakarta Pusat</p>
+                <div class="cinema-facilities">
+                  <span><i class="fas fa-wheelchair"></i> Disabilitas</span>
+                  <span><i class="fas fa-car"></i> Parkir</span>
+                  <span><i class="fas fa-utensils"></i> Cafe</span>
+                </div>
+              </div>
+              <button class="select-cinema-btn">Pilih</button>
+            </div>
+            <div class="cinema-card" data-cinema="fivewell-pondok-indah">
+              <div class="cinema-info">
+                <h4>FiveWell Pondok Indah</h4>
+                <p>Jl. Metro Pondok Indah, Jakarta Selatan</p>
+                <div class="cinema-facilities">
+                  <span><i class="fas fa-wheelchair"></i> Disabilitas</span>
+                  <span><i class="fas fa-car"></i> Parkir</span>
+                  <span><i class="fas fa-couch"></i> VIP</span>
+                </div>
+              </div>
+              <button class="select-cinema-btn">Pilih</button>
+            </div>
+            <div class="cinema-card" data-cinema="fivewell-taman-anggrek">
+              <div class="cinema-info">
+                <h4>FiveWell Taman Anggrek</h4>
+                <p>Jl. Letjen S. Parman, Jakarta Barat</p>
+                <div class="cinema-facilities">
+                  <span><i class="fas fa-car"></i> Parkir</span>
+                  <span><i class="fas fa-utensils"></i> Cafe</span>
+                  <span><i class="fas fa-couch"></i> VIP</span>
+                </div>
+              </div>
+              <button class="select-cinema-btn">Pilih</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Date & Time Selection -->
+      <div class="selection-content" id="step3-content">
+        <div class="datetime-selection">
+          <h3>Pilih Tanggal & Jam Tayang di <span id="selectedCinema">FiveWell Grand Indonesia</span></h3>
+          
+          <div class="date-picker">
+            <button class="prev-date"><i class="fas fa-chevron-left"></i></button>
+            <div class="date-scroll">
+              <div class="date-option active">
+                <span>Hari Ini</span>
+                <span>14 Jul</span>
+              </div>
+              <div class="date-option">
+                <span>Besok</span>
+                <span>15 Jul</span>
+              </div>
+              <div class="date-option">
+                <span>Sab</span>
+                <span>16 Jul</span>
+              </div>
+              <div class="date-option">
+                <span>Min</span>
+                <span>17 Jul</span>
+              </div>
+              <div class="date-option">
+                <span>Sen</span>
+                <span>18 Jul</span>
+              </div>
+              <div class="date-option">
+                <span>Sel</span>
+                <span>19 Jul</span>
+              </div>
+              <div class="date-option">
+                <span>Rab</span>
+                <span>20 Jul</span>
+              </div>
+            </div>
+            <button class="next-date"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          
+          <div class="time-selection">
+            <div class="time-slot">
+              <h4>Studio 1 (Regular)</h4>
+              <div class="time-options">
+                <button class="time-option">10:00</button>
+                <button class="time-option">13:30</button>
+                <button class="time-option">16:45</button>
+                <button class="time-option">19:15</button>
+                <button class="time-option">21:30</button>
+              </div>
+            </div>
+            <div class="time-slot">
+              <h4>Studio 2 (Dolby Atmos)</h4>
+              <div class="time-options">
+                <button class="time-option">11:15</button>
+                <button class="time-option">14:45</button>
+                <button class="time-option">18:00</button>
+                <button class="time-option">20:30</button>
+              </div>
+            </div>
+            <div class="time-slot">
+              <h4>Studio 3 (VIP)</h4>
+              <div class="time-options">
+                <button class="time-option">12:00</button>
+                <button class="time-option">15:30</button>
+                <button class="time-option">19:00</button>
+                <button class="time-option">22:15</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi -->
+          <div class="action-buttons" style="margin-top: 30px;">
+            <button class="back-btn">Kembali</button>
+            <button class="
