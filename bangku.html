@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Pemilihan Kursi Bioskop</title>
+          <link rel="stylesheet" href="bangku.css" />
+     </head>
+     <body>
+          <div class="container">
+               <h1>🎬 Pilih Kursi Anda</h1>
+               <p>
+                    Pilih kursi yang tersedia (hijau = tersedia, abu-abu = terisi, merah = dipilih)
+               </p>
+
+               <div class="screen">LAYAR BIOSKOP</div>
+
+               <div class="seating">
+                    <div class="row" id="row-A">
+                         <div class="seat available" data-seat="A1">A1</div>
+                         <div class="seat available" data-seat="A2">A2</div>
+                         <div class="seat occupied" data-seat="A3">A3</div>
+                         <div class="seat available" data-seat="A4">A4</div>
+                         <div class="seat available" data-seat="A5">A5</div>
+                    </div>
+                    <div class="row" id="row-B">
+                         <div class="seat available" data-seat="B1">B1</div>
+                         <div class="seat occupied" data-seat="B2">B2</div>
+                         <div class="seat occupied" data-seat="B3">B3</div>
+                         <div class="seat available" data-seat="B4">B4</div>
+                         <div class="seat available" data-seat="B5">B5</div>
+                    </div>
+                    <div class="row" id="row-C">
+                         <div class="seat available" data-seat="C1">C1</div>
+                         <div class="seat available" data-seat="C2">C2</div>
+                         <div class="seat available" data-seat="C3">C3</div>
+                         <div class="seat available" data-seat="C4">C4</div>
+                         <div class="seat available" data-seat="C5">C5</div>
+                    </div>
+               </div>
+
+               <div class="summary">
+                    <p>Kursi yang dipilih: <span id="selected-seats">0</span></p>
+                    <p>Total Harga: Rp <span id="total-price">0</span></p>
+               </div>
+
+               <button id="book-btn" class="book-btn">Pesan Sekarang</button>
+          </div>
+
+          <script>
+               // Cek apakah ada data pemesanan baru
+               const bookingData = JSON.parse(localStorage.getItem("latestBooking"));
+               if (bookingData) {
+                    // Hanya tampilkan sekali, lalu hapus
+                    localStorage.removeItem("latestBooking");
+
+                    const message = `
+      🎉 Pemesanan Berhasil!
+      Film: ${bookingData.movie}
+      Bioskop: ${bookingData.cinema}, ${bookingData.city}
+      Waktu: ${bookingData.date}
+      Kursi: ${bookingData.seats.join(", ")}
+      Total: Rp ${bookingData.total.toLocaleString("id-ID")}
+    `;
+
+                    alert(message);
+               }
+          </script>
+
+          <script src="bangku.js"></script>
+     </body>
+</html>
